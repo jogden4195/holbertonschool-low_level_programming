@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+/**
+ * 
+ * main - prints out "Programming is like building a multilingual puzzle"
+ *
+ */
+
+int main()
+{
+  char str;
+  str = "Programming is like building a multilingual puzzle\n";
+  puts(str);
+  return 0;
+}
