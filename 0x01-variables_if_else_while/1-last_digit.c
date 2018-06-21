@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-#include <math.h>
 
 /**
  * main - Prints out last digit of integer n
