@@ -8,7 +8,8 @@
 int main(void)
 {
 	int i, n;
-	char first_int, second_int;
+	char first_int = '0';
+	char second_int = '0';
 
 	for (i = 0; i <= 9; i++)
 	{
@@ -24,7 +25,7 @@ int main(void)
 			second_int++;
 		}
 		first_int++;
-		second_int = 0;
+		second_int = '0';
 	}
 	putchar('\n');
 	return (0);
