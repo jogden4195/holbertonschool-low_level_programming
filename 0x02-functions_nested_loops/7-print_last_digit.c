@@ -9,11 +9,12 @@
 
 int print_last_digit(int n)
 {
-	int digit, a, i;
-
+	int digit, a, i, x;
+	
+	x = n;
 	if (n < 0)
-		n = 0 - n;
-	digit = n % 10;
+		x = 0 - x;
+	digit = x % 10;
 	a = 0;
 	i = 48;
 	while (digit != a)
