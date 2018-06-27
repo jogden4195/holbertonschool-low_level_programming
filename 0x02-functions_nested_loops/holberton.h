@@ -19,3 +19,5 @@ int print_sign(int n);
 int add(int, int);
 
 void print_to_98(int n);
+
+void times_table(void);

@@ -16,16 +16,28 @@ void times_table(void)
 		{
 			product = multiplier * i;
 			if (product <= 9)
+			{
+				_putchar(' ');
 				_putchar('0' + product);
+				if (i != 9)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
+			}
 			else
 			{
-			  _putchar('0' + (product / 10));
-			  _putchar('0' + (product % 10));
-			}
-			if (product != 81)
-			{
-				_putchar(',');
-				_putchar(' ');
+			  	_putchar('0' + (product / 10));
+			  	_putchar('0' + (product % 10));
+			
+				if (product != 81)
+				{
+			  		if (i != 9)
+					{
+						_putchar(',');
+						_putchar(' ');
+					}
+				}
 			}
 		}
 		_putchar('\n');
