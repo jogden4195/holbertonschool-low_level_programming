@@ -7,18 +7,30 @@
  */
 void jack_bauer(void)
 {
-  int hr1, hr2, min1, min2,;
-  
-	hr1 = 48;
-	hr2 = 48;
-	min1 = 48;
-	min2 = 48;
-	while (hr1 != 50 && hr2 != 52)
+	int h1, h2, min1, min2;
+
+	for (h1 = '0'; h1 <= '2'; h1++)
 	{
-	  while (min1 != 54)
-	    {
-	      while (min2 != )
-		_putchar(hr1
-		min2++;
-	    }
+		for (h2 = '0'; h2 <= '9'; h2++)
+		{
+			for (min1 = '0'; min1 < '6'; min1++)
+			{
+				for (min2 = '0'; min2 <= '9'; min2++)
+				{
+					_putchar(hr1);
+					_putchar(hr2);
+					_putchar(':');
+					_putchar(min1);
+					_putchar(min2);
+					_putchar('\n');
+				}
+			}
+			if (hr2 == '3')
+			{
+				if (hr1 == '2')
+					return;
+			}
+		}
 	}
+
+}
