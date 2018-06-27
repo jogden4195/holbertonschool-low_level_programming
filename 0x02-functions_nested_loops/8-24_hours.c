@@ -17,17 +17,17 @@ void jack_bauer(void)
 			{
 				for (min2 = '0'; min2 <= '9'; min2++)
 				{
-					_putchar(hr1);
-					_putchar(hr2);
+					_putchar(h1);
+					_putchar(h2);
 					_putchar(':');
 					_putchar(min1);
 					_putchar(min2);
 					_putchar('\n');
 				}
 			}
-			if (hr2 == '3')
+			if (h2 == '3')
 			{
-				if (hr1 == '2')
+				if (h1 == '2')
 					return;
 			}
 		}
