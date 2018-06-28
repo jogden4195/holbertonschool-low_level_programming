@@ -14,12 +14,12 @@ int main(void)
 	while (i <= n)
 	{
 		j = 0;
-		if ((n % i) == 0)
+		if (n % i == 0)
 		{
 			k = 1;
 			while (k <= i)
 			{
-				if ((i % k) == 0)
+				if (i % k == 0)
 			  		j++;
 				k++;
 			}
@@ -27,7 +27,8 @@ int main(void)
 				highest = i;
 		}
 		i++;
+		printf("%ld", highest); 
 	}
-	printf("%lu\n", highest);
+	printf("%ld\n", highest);
 	return (0);
 }
