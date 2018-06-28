@@ -27,7 +27,7 @@ int main(void)
 				highest = i;
 		}
 		i++;
-		printf("%ld", highest); 
+		printf("%ld", highest);
 	}
 	printf("%ld\n", highest);
 	return (0);
