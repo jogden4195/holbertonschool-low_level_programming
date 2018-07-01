@@ -18,7 +18,7 @@ int main(void)
 		if (i != 48)
 			printf("%lu, ", c);
 		else
-		  	printf("%lu\n", c);
+			printf("%lu\n", c);
 	}
 	return (0);
 }
