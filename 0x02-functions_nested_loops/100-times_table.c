@@ -21,7 +21,7 @@ void print_times_table(int n)
 			product = i * multiplier;
 			if (product <= 9)
 			{
-			  	if (i != 0)
+				if (i != 0)
 				{
 					_putchar(' ');
 					_putchar(' ');
