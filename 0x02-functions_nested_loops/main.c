@@ -2,14 +2,12 @@
 
 int main(void)
 {
-  int r;
-
-    r = _islower('H');
-    _putchar(r + '0');
-    r = _islower('o');
-    _putchar(r + '0');
-    r = _islower(108);
-    _putchar(r + '0');
-    _putchar('\n');
-    return (0);
+  print_times_table(3);
+  _putchar('\n');
+  print_times_table(5);
+  _putchar('\n');
+  print_times_table(98);
+  _putchar('\n');
+  print_times_table(12);  
+  return (0);
 }
