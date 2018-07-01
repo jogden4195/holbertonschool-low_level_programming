@@ -22,5 +22,6 @@ int main(void)
   _putchar('\n');
   print_number(INT_MIN);
   _putchar('\n');
+  printf("%d", INT_MIN);
   return (0);
 }
