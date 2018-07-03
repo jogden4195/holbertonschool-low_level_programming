@@ -9,7 +9,7 @@
 
 void puts_half(char *str)
 {
-	int counter = 0, half, i;
+	int counter = 0, half;
 
 	while (str[counter] != '\0')
 		counter++;
@@ -19,8 +19,13 @@ void puts_half(char *str)
 		half = counter / 2;
 	if (half != 0)
 	{
-		for (i = half; i < counter; i++)
-			_putchar(str[i]);
+		if (counter % 2 != 0)
+			counter--;
+	  	while(half < counter)
+		{
+		  _putchar(str[half]);
+		  half++;
+		}
 	}
 	_putchar('\n');
 }
