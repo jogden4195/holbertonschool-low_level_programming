@@ -2,14 +2,13 @@
 #include "holberton.h"
 int main(void)
 {
-  char *str;
+  int array[5];
 
-  str = "0123456789";
-  puts_half("1");
-  puts_half("12");
-  puts_half("123");
-  puts_half("01234");
-  puts_half("012345678");
-  puts_half(str);
+  array[0] = 98;
+  array[1] = 402;
+  array[2] = -198;
+  array[3] = 298;
+  array[4] = -1024;
+  print_array(array, 5);
   return (0);
 }
