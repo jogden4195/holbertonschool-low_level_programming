@@ -8,6 +8,8 @@ int main(void)
   puts_half("1");
   puts_half("12");
   puts_half("123");
+  puts_half("01234");
+  puts_half("012345678");
   puts_half(str);
   return (0);
 }
