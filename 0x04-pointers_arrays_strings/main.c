@@ -1,9 +1,13 @@
+#include <stdio.h>
 #include "holberton.h"
 int main(void)
 {
-  char *str;
+  char s[10] = "Holberton", r[10] = "no";
 
-  str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-  print_rev(str);
+  printf("%s\n", s);
+  rev_string(s);
+  printf("%s\n", s);
+  rev_string(r);
+  printf("%s\n", r);
   return (0);
 }
