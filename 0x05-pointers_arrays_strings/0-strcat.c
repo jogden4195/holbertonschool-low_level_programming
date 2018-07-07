@@ -4,13 +4,14 @@
  * *_strcat - concatantes 2 strings
  * @src: string that we are concatinating
  * @dest: string that we are concatinating to
- * 
+ *
  * Return: char
  */
 
 char *_strcat(char *dest, char *src)
 {
 	int length, i;
+
 	length = 0;
 	i = 0;
 
