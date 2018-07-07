@@ -1,0 +1,16 @@
+/**
+ * *rot13 - encodes a string using rot13
+ * @str: pointer to the string we are encoding
+ *
+ * Return: char
+ */
+
+char *rot13(char *str)
+{
+	int i = 0;
+	char alpha[3
+
+	while (str[i] != '\0')
+	  {
+	    
+}
