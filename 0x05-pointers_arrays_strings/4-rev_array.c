@@ -10,7 +10,7 @@ void swap_int(int *a, int *b);
 
 void reverse_array(int *a, int n)
 {
-	int *p1 = a; 
+	int *p1 = a;
 	int *p2;
 	int end;
 
@@ -34,10 +34,10 @@ void reverse_array(int *a, int n)
 
 void swap_int(int *a, int *b)
 {
-  int val1, val2;
+	int val1, val2;
 
-  val1 = *a;
-  val2 = *b;
-  *a = val2;
-  *b = val1;
+	val1 = *a;
+	val2 = *b;
+	*a = val2;
+	*b = val1;
 }
