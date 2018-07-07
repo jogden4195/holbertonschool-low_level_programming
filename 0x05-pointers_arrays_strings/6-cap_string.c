@@ -11,8 +11,9 @@ char *cap_string(char *str)
 {
 	int i = 0, j = 0;
 	int array[] = {9, 10, 11, 32, 33, 34, 40, 41, 44, 46, 59, 63, 123, 125};
-
-	while (str[i] != '\0')
+	if (str[0] >= 97 && str[0] <= 122)
+		str[0] = str[0] - 32;
+	while (str[i] != 0)
 	{
 		for (j = 0; j < 14; j++)
 		{
