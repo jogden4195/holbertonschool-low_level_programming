@@ -1,6 +1,3 @@
-char *string_tolower(char *str);
-char *cap_string(char *str);
-
 /**
  * *leet - encodes a string into 1337
  * @str: string that we are encoding
@@ -10,70 +7,19 @@ char *cap_string(char *str);
 char *leet(char *str)
 {
 	int i = 0, j;
-	char *p;
-	int letters[5][2] = {{97, 52}, {101, 51}, {111, 48}, {116, 55}, {108, 49}};
-
-	p = string_tolower(str);
-	/*printf("%s", lower);*/
-	while (p[i] != 0)
-	{
-		for (j = 0; j < 5; j++)
-		{
-			if (p[i] == letters[j][0])
-				str[i] = letters[j][1];
-		}
-		i++;
-	}
-	str = cap_string(str);
-	return (str);
-
-}
-
-/**
- * *string_tolower - modified string_toupper. Makes an entire string lowercase
- * @str: the string that we are making lowercase
- *
- * Return: char
- */
-
-char *string_tolower(char *str)
-{
-	int i = 0, length = 0;
-
-	while (str[length] != 0)
-		length++;
-	for (i = 0; i < length; i++)
-	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			str[i] = str[i] + 32;
-	}
-	return (str);
-}
-
-/**
- * *cap_string - modified version of cap_string. Capitalizes
- * the first word of a sentence in a str.
- * @str: string that we are capitalizing
- *
- * Return: char
- */
-char *cap_string(char *str)
-{
-	int i = 0;
+	int lower[] = {97, 101, 116, 108, 111};
+	int upper[] = {65, 69, 84, 76, 79};
+	int nums[] = {52, 51, 55, 49, 48};
 
 	while (str[i] != 0)
 	{
-		if (str[i] == '.')
+		for (j = 0; j < 5; j++)
 		{
-			if (str[i + 1] == ' ')
-			{
-				if (str[i + 2] >= 97 && str[i + 2] <= 122)
-				{
-					str[i + 2] = str[i + 2] - 32;
-				}
-			}
+			if (str[i] == lower[j] || str[i] == upper[j])
+				str[i] = nums[j];
 		}
 		i++;
 	}
 	return (str);
+
 }

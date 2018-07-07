@@ -8,10 +8,10 @@
  */
 int main(void)
 {
-  char s[] = "ex}pect t(he best. Prepar)e for th{e worst. C,apitalize on what comes.\nhello world! hello-wo\"rld 0123456hel\vlo w?orld\thello wor;ld.hello world\n";
+  char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
   char *p;
 
-  p = cap_string(s);
+  p = leet(s);
   printf("%s", p);
   printf("%s", s);
   return (0);
