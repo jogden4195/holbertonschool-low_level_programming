@@ -11,12 +11,11 @@ char *rot13(char *str)
 	char letters1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char letters2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	
 	while (str[i] != '\0')
 	{
-		for(j = 0; j < 52; j++)
+		for (j = 0; j < 52; j++)
 		{
-		  	if (str[i] == letters1[j])
+			if (str[i] == letters1[j])
 			{
 				str[i] = letters2[j];
 				break;
