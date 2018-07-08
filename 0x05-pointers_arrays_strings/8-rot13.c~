@@ -1,0 +1,29 @@
+/**
+ * *rot13 - encodes a string using rot13
+ * @str: string that we are encoding
+ *
+ * Return: char
+ */
+
+char *rot13(char *str)
+{
+	int i = 0, j;
+  	char encrypt[] = str;
+	char letters1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char letters2[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	
+	while (encrypt[i] != '\0')
+	{
+		for(j = 0; j < 52; j++)
+		{
+		  	if (encrypt[i] == letters1[j])
+			{
+				encrypt[i] = letters2[j];
+				break;
+			}
+		}
+		i++;
+	}
+	return (encrypt);
+}
