@@ -8,9 +8,17 @@
  */
 int main(void)
 {
-  int n;
+  int r;
 
-  n = _strlen_recursion("Corbin Coleman");
-  printf("%d\n", n);
+  r = is_palindrome("level");
+  printf("%d\n", r);
+  r = is_palindrome("redder");
+  printf("%d\n", r);
+  r = is_palindrome("holberton");
+  printf("%d\n", r);
+  r = is_palindrome("step on no pets");
+  printf("%d\n", r);
+  r = is_palindrome("");
+  printf("%d\n", r);
   return (0);
 }
