@@ -3,7 +3,8 @@
  * @haystack: pointer to string that we are searching through
  * @needle: pointer to substring that we are searching for
  *
- * Return: pointer to begining of located substring or NULL if substring not found
+ * Return: pointer to begining of located substring
+ * or NULL if substring not found
  */
 
 char *_strstr(char *haystack, char *needle)
