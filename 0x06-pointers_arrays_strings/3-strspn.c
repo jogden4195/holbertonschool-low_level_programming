@@ -1,4 +1,4 @@
-/*#include <stdio.h>*/
+#include <stdio.h>
 /**
  * _strspn - gets the length of a prefix substring
  * @s: pointer to the string that is being scanned
@@ -9,7 +9,7 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i = 0, j, go = 0, count = 0, total = 0, length;
+	unsigned int i = 0, j,  count = 0, total = 0, length;
 
 	while (accept[length] != '\0')
 		length++;
@@ -17,21 +17,21 @@ unsigned int _strspn(char *s, char *accept)
 		return (0);
 	while (s[i] != '\0')
 	{
-		for (j = 0; j <= length; j++)
+		while(accept[j] != '\0')
 		{
 			if (s[i] == accept[j])
 			{
 				count++;
-				go = 1;
 				break;
 			}
-			go = 0;
+			j++;
 		}
 		if (total < count)
 			total = count;
-		/*printf("Letter: %c, Go: %u, Total: %u\n", s[i], go, total);*/
-		if (go == 0)
+		printf("Letter: %c, Total: %u\n", s[i], total);
+		if (j == length)
 			count = 0;
+		j = 0;
 		i++;
 	}
 	return (total);

@@ -14,5 +14,13 @@ int main(void)
 
   n = _strspn(s, f);
   printf("%u\n", n);
+
+  f = "";
+  n = _strspn(s, f);
+  printf("%u\n", n);
+
+  f = "Jenn";
+  n = _strspn(s, f);
+  printf("%u\n", n);
   return (0);
 }
