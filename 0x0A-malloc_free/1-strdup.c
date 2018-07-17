@@ -2,7 +2,7 @@
 #include <stdlib.h>
 int _strlen(char *s);
 /**
- * *strdup - returns a pointer to a newly allocated space in
+ * *_strdup - returns a pointer to a newly allocated space in
  * memory, which contains a copy of the string given as a
  * parameter
  * @str: string we are copying into new array
@@ -15,19 +15,19 @@ char *_strdup(char *str)
 	char *t;
 	int i = 0, size;
 
-	if (*str == '\0')
+	if (str == NULL)
 		return (NULL);
 	size = _strlen(str) + 1;
 	t = malloc(size * sizeof(char));
 	if (t == NULL)
-		return ('\0');
+		return (NULL);
 	while (str[i] != '\0')
 	{
 		t[i] = str[i];
 		i++;
 	}
 	t[i] = '\0';
-  	return (t);
+	return (t);
 }
 
 /**
