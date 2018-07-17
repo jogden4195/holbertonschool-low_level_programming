@@ -19,26 +19,25 @@ int **alloc_grid(int width, int height)
 	{
 		return (NULL);
 	}
-	t = malloc(sizeof(int *) * height);
+	t = (int **)malloc(sizeof(int *) * height);
 	while (i < width)
 	{
-		t[i] = malloc(sizeof(int) * width);
+	  t[i] = (int *)malloc(sizeof(int) * width);
 		i++;
 	}
 	if (t == NULL)
 	{
 		return (NULL);
 	}
-	while (i < width * height)
+	while (i < width)
 	{
 		while (j < height)
 		{
-			*(t + i * width + j) = 0;
+		  *(*(t + i) + j) = 0;
 			j++;
 		}
 		j = 0;
 		i++;
 	}
-	printf("Go!\n");
 	return (t);
 }
