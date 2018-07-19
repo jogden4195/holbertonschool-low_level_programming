@@ -25,10 +25,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		while (s2[size2] != '\0')
 			size2++;
 	}
-        if (size2 < n)            /*case for when n is greater than the size of s2*/
+	if (size2 < n)            /*
+				   *case for when n is
+				   *greater than the size of s2
+				   */
 	{
-	  t = malloc(sizeof(char) * (size1 + size2 + 1));
-		end = size2;      /*this will be the used to indicate the end of our concatenated str*/
+		t = malloc(sizeof(char) * (size1 + size2 + 1));
+		end = size2;      /*
+				   *this will be the used to
+				   *indicate the end of our concatenated str
+				   */
 	}
 	else
 	{
@@ -37,17 +43,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (t == NULL)            /*case for when malloc fails*/
 		return (NULL);
-	while (i < size1)      /*initializing our new string*/
+	while (i < size1)         /*initializing our new string*/
 	{
 		t[i] = s1[i];
 		i++;
 	}
-	while (i < size1 + end) /*concatinating s2 to s1*/
+	while (i < size1 + end)   /*concatinating s2 to s1*/
 	{
 		t[i] = s2[j];
 		i++;
 		j++;
 	}
-	t[i] = '\0';              /*Need that null char at the end of our new string*/
+	t[i] = '\0';              /*Need that null char at the end of
+				   *our new string
+				   */
 	return (t);
 }
