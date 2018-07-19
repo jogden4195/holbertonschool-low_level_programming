@@ -16,8 +16,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int end, i = 0, j = 0, size1 = 0;
 	char *t;
 
-	while (s1[size1] != '\0') /*getting size of s1*/
-		size1++;
+	if (s1 == NULL)
+		size1 = 0;
+	else
+	{  
+		while (s1[size1] != '\0') /*getting size of s1*/
+			size1++;
+	}
 	if (s2 == NULL)           /*case for when s2 is NULL*/
 		size2 = 0;
 	else                      /*getting size of s2*/
