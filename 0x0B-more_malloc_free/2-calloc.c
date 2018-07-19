@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+void bzero(void *to, size_t count);
 
 /**
  * _calloc - allocates memory for an array of nmemb elements
@@ -14,20 +15,28 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int i;
-	int *t;
+	void *t;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 	t = malloc(nmemb * size);
 	if (t == NULL)
 		return (NULL);
-	while (i < nmemb)
-	{
-		t[i] = 0;
-		i++;
-	}
-	return ((void *)t);
+	bzero(t, nmemb);
+	return (t);
 }
 
-	
+/**
+ * bzero - initializes our void array
+ * @to: the array we are initializing
+ * @count: size of the array
+ *
+ * Return: nothing
+ */
+void bzero(void *to, size_t count)
+{
+	char *t;
+
+	for (t = to; count--;)
+		*t++ = '\0';
+}
