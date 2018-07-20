@@ -10,12 +10,12 @@
 
 void *malloc_checked(unsigned int b)
 {
-	void *t;
+	void *t;          /* Declare the pointer we will return */
 
-	t = malloc(b);
-	if (t == NULL)
+	t = malloc(b);    /* Malloc b */
+	if (t == NULL)    /* If malloc fails, exit with status 98 */
 	{
 		exit(98);
 	}
-	return (t);
+	return (t);       /* Return t */
 }
