@@ -44,7 +44,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 				*/
 	if (t == NULL)
 		return (NULL);
-	size = new_size;       /*
+	size = old_size;   /*
 				*we will end our upcoming loop when size = 0. Since
 				*we cannot actually change the value of new_size,
 				*we gotta set another changable variable to the same
