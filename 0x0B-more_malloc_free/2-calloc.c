@@ -17,12 +17,21 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *t;
 
-	if (nmemb == 0 || size == 0)
+	if (nmemb == 0 || size == 0)   /*
+					*taking care of nmemb = 0
+					*or size = 0 case
+					*/
 		return (NULL);
 	t = malloc(nmemb * size);
-	if (t == NULL)
+	if (t == NULL)                 /*
+					*if malloc fails, return
+					*NULL
+					*/
 		return (NULL);
-	bzero(t, nmemb * size);
+	bzero(t, nmemb * size);        /*
+					*this function takes case of
+					*the initialization
+					*/
 	return (t);
 }
 
@@ -35,8 +44,20 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  */
 void bzero(void *to, size_t count)
 {
-	char *t;
+	char *t;                        /*
+					 *since chars are only 1 byte
+					 *each, the entire array will
+					 *be filled with 0, rather than say
+					 *an int which will not initialize
+					 *the entire array since we would
+					 *basically overflow
+					 */
 
-	for (t = to; count--;)
+	for (t = to; count--;)          /*
+					 *since we cannot dereference a
+					 *void pointer, this char pointer t
+					 *will be the one to initialize the
+					 *array
+					 */
 		*t++ = '\0';
 }
