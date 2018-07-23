@@ -48,7 +48,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		if (owner_cp == NULL)
 		{
 			free(name);
-		  	free(new_dog);
+			free(new_dog);
 			return (NULL);
 		}
 		while (owner[i] != '\0')
