@@ -1,7 +1,8 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <stdio.h>
 int _strlen(char *s);
-
+char *_strdup(char *str);
 /**
  * new_dog - creates a new dog
  * @name: name of new dog
@@ -13,9 +14,6 @@ int _strlen(char *s);
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i = 0, name_len, owner_len;
-	char *name_cp;
-	char *owner_cp;
 	dog_t *new_dog;
 
 	if (name == NULL || owner == NULL)
@@ -23,41 +21,19 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_dog = malloc(sizeof(struct dog));
 	if (new_dog == NULL)
 		return (NULL);
-	name_len = _strlen(name);
-	if (name_len == 0)
-		name_len = 1;
-	name_cp = malloc(sizeof(char) * name_len);
-	if (name_cp == NULL)
+	if (_strdup(name) == NULL)
 	{
 		free(new_dog);
 		return (NULL);
 	}
-	while (name[i] != '\0')
-	{
-		name_cp[i] = name[i];
-		i++;
-	}
-	name_cp[i] = '\0';
-	new_dog->name = name_cp;
+	new_dog->name = _strdup(name);
 	new_dog->age = age;
-	owner_len = _strlen(owner);
-	if (owner_len == 0)
-		owner_len = 1;
-	owner_cp = malloc(sizeof(char) * owner_len);
-	if (owner_cp == NULL)
+	if (_strdup(owner) == NULL)
 	{
-		free(name_cp);
 		free(new_dog);
 		return (NULL);
 	}
-	i = 0;
-	while (owner[i] != '\0')
-	{
-		owner_cp[i] = owner[i];
-		i++;
-	}
-	owner_cp[i] = '\0';
-	new_dog->owner = owner_cp;
+	new_dog->owner = _strdup(owner);
 	return (new_dog);
 }
 
@@ -75,4 +51,33 @@ int _strlen(char *s)
 	while (s[length] != '\0')
 		length++;
 	return (length);
+}
+
+/**
+ * *_strdup - returns a pointer to a newly allocated space in
+ * memory, which contains a copy of the string given as a
+ * parameter
+ * @str: string we are copying into new array
+ *
+ * Return: pointer to new array if success (char), NULL if str
+ * is empty or insufficient memory was available
+ */
+char *_strdup(char *str)
+{
+	char *t;
+	int i = 0, size;
+
+	if (str == NULL)
+	return (NULL);
+	size = _strlen(str) + 1;
+	t = malloc(size * sizeof(char));
+	if (t == NULL)
+		return (NULL);
+	while (str[i] != '\0')
+	{
+		t[i] = str[i];
+		i++;
+	}
+  	t[i] = '\0';
+	return (t);
 }
