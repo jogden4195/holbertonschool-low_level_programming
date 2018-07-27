@@ -3,7 +3,7 @@
 
 /**
  * sum_them_all - returns the sum of all its parameters
- * @n - the first number that we are taking in
+ * @n: the first number that we are taking in
  *
  * Return: sum of all parameters (int)
  */
