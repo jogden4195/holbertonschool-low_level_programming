@@ -14,7 +14,6 @@ void print_all(const char * const format, ...)
 	va_list form_list;
 	int i = 0;
 	char *para;
-	float num;
 	int comma = 0;
 
 	va_start(form_list, format);
@@ -31,8 +30,7 @@ void print_all(const char * const format, ...)
 				comma = 1;
 				break;
 			case 'f':
-				num = va_arg(form_list, double);
-				printf("%f", num);
+			  printf("%f", va_arg(form_list, double));
 				comma = 1;
 				break;
 			case 's':
