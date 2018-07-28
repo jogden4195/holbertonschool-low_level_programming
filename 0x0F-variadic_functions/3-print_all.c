@@ -54,5 +54,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-	va_exit(form_list);
+	va_end(form_list);
 }
