@@ -16,10 +16,8 @@ void print_all(const char * const format, ...)
 	char *para;
 	int comma = 0;
 
-	if (format == NULL)
-		return;
 	va_start(form_list, format);
-	while (format[i] != '\0')
+	while (format && format[i] != '\0')
 	{
 		switch (format[i])
 		{
