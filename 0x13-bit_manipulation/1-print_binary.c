@@ -9,7 +9,7 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned int i = 524288, flag = 0; /* binary value of i: 1000 0000 0000 0000 */
+	unsigned long int i = 4611686018427387904, flag = 0;
 
 	if (n == 0)
 	{
