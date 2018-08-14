@@ -1,0 +1,12 @@
+# 0x14. C - File I/O
+## What you should learn from this project
+At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+* Look for the right source of information online
+* How to create, open, close, read, and write files
+* What are file descriptors
+* What are the 3 standard file decriptors, what are their purpose, and what are their POSIX names
+* How to use the I/O system calls open, close, read, and write
+* What are and how to use the flags o_rdonly, o_wronly, o_rdwr
+* What are file permissions and how to set them when creating a file with the open system call
+* What is a system call
+* What is the difference between a function and a system call
