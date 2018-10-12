@@ -12,9 +12,9 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int i;
-	hash_node_t *new, *temp;
+	hash_node_t *new, *temp, *head;
 
-	if (key != '\0' && key != NULL && value != '\0' && value != NULL)
+	if (ht != NULL && key != NULL && value != NULL)
 	{
 		new = malloc(sizeof(hash_node_t));
 		if (new)
@@ -28,13 +28,32 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 				return (0);
 			if (!(ht->array[i]))
 			{
+				printf("hello!");
 				ht->array[i] = new;
 				new->next = NULL;
 			}
 			else
 			{
-				temp = ht->array[i];
-				new->next = temp;
+				head = ht->array[i];
+				temp = head;
+				printf("hi!");
+				while (temp->next)
+				{
+					printf("hi");
+					if (strcmp(temp->key, key) == 0)
+					{
+						printf("hi");
+						free(new->key);
+						free(new->value);
+						free(new);
+						free(temp->value);
+						temp->value = strdup(value);
+						printf("%s", temp->value);
+						return (1);
+					}
+					temp = temp->next;
+				}
+				new->next = head;
 				ht->array[i] = new;
 			}
 			return (1);
