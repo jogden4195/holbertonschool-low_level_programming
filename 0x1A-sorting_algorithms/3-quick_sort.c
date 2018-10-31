@@ -11,11 +11,21 @@
 
 void quick_sort(int *array, size_t size)
 {
+	unsigned int i, flag = 0;
+
 	if (!array || size < 2)
 		return;
-	if (size == 2 && array[0] == array[1])
-		return;
-	butler(array, size, 0, size - 1);
+	for (i = 1; i < size; i++)
+	{
+		if (array[i] != array[i - 1])
+			break;
+		if (i == size - 1)
+			flag = 1;
+	}
+	if (flag == 0)
+		butler(array, size, 0, size - 1);
+	else
+		 return;
 }
 
 /**
