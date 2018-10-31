@@ -11,7 +11,7 @@
 
 void quick_sort(int *array, size_t size)
 {
-	if (size < 2)
+	if (!array || size < 2)
 		return;
 	butler(array, size, 0, size - 1);
 }
@@ -68,7 +68,7 @@ int partition(int *array, size_t size, int lo, int hi)
 			i++;
 		}
 	}
-	if (i != j)
+	if (i != j && array[j] != pivot)
 	{
 		a = array[i];
 		array[i] = pivot;
