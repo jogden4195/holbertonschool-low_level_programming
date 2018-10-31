@@ -25,7 +25,7 @@ void quick_sort(int *array, size_t size)
 	if (flag == 0)
 		butler(array, size, 0, size - 1);
 	else
-		 return;
+		return;
 }
 
 /**
