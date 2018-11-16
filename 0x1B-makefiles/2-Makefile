@@ -1,3 +1,4 @@
+#Makefile that creates executable
 CC= gcc
 SRC = main.c holberton.c
 OBJ = $(SRC:.c=.o)
