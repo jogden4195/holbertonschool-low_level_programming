@@ -7,4 +7,4 @@ NAME = holberton
 	$(CC) -c -o $@ $< 
 
 all: $(OBJ)
-	$(CC) $(OBJ) -o holberton
+	$(CC) $(OBJ) -o $(NAME)
