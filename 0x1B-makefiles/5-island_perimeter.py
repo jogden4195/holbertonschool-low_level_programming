@@ -30,11 +30,11 @@ def check_surrounding(grid, coord1, coord2):
         if coord2 == 0:
             under = check_under(grid, coord1, coord2)
             right = check_r(grid, coord1, coord2)
-            return 1 + under + right
+            return 2 + under + right
         elif coord2 == list_end:
             under = check_under(grid, coord1, coord2)
             left = check_l(grid, coord1, coord2)
-            return 1 + under + left
+            return 2 + under + left
         else:
             under = check_under(grid, coord1, coord2)
             right = check_r(grid, coord1, coord2)
@@ -44,11 +44,11 @@ def check_surrounding(grid, coord1, coord2):
         if coord2 == 0:
             up = check_up(grid, coord1, coord2)
             right = check_r(grid, coord1, coord2)
-            return 1 + up + right
+            return 2 + up + right
         elif coord2 == list_end:
             up = check_up(grid, coord1, coord2)
             left = check_l(grid, coord1, coord2)
-            return 1 + up + left
+            return 2 + up + left
         else:
             up = check_up(grid, coord1, coord2)
             right = check_r(grid, coord1, coord2)
