@@ -16,6 +16,7 @@ def island_perimeter(grid):
             while j < list_len:
                 if grid[i][j] == 1:
                     perimeter += check_surrounding(grid, i, j)
+                    print ("perimeter after checking cell{}.{}: {}".format(i, j, perimeter))
                 j += 1
         i += 1
     return perimeter
@@ -59,12 +60,12 @@ def check_surrounding(grid, coord1, coord2):
             up = check_up(grid, coord1, coord2)
             under = check_under(grid, coord1, coord2)
             right = check_r(grid, coord1, coord2)
-            return up + under + right
+            return 1 + up + under + right
         elif coord2 == list_end:
             up = check_up(grid, coord1, coord2)
             under = check_under(grid, coord1, coord2)
             left = check_l(grid, coord1, coord2)
-            return up + under + left
+            return 1 + up + under + left
         else:
             up = check_up(grid, coord1, coord2)
             under = check_under(grid, coord1, coord2)
