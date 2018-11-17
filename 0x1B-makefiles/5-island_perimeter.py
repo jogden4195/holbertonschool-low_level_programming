@@ -9,13 +9,15 @@ def island_perimeter(grid):
     grid_len = len(grid)
     list_len = len(grid[0])
     perimeter = 0
-    for a_list in grid:
-        if sum(a_list) != 0:
-            for i in range(len(a_list)):
-                if a_list[i] == 1:
-                    coord1 = grid.index(a_list)
-                    coord2 = a_list[i]
-                    perimeter += check_surrounding(grid, coord1, coord2)
+    i = 0
+    while i < grid_len:
+        if sum(grid[i]) != 0:
+            j = 0
+            while j < list_len:
+                if grid[i][j] == 1:
+                    perimeter += check_surrounding(grid, i, j)
+                j += 1
+        i += 1
     return perimeter
 
 
