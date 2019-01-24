@@ -14,7 +14,7 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-	size_t i, j,  m = 0, l = 0, r = size - 1;
+	unsigned int i, j,  m = 0, l = 0, r = size - 1;
 
 	if (array)
 	{
@@ -32,7 +32,7 @@ int binary_search(int *array, size_t size, int value)
 				i++;
 			}
 			printf("\n");
-			m = array[(l + r) / 2];
+			m = (l + r) / 2;
 			if (array[m] < value)
 				l = m + 1;
 			else if (array[m] > value)
